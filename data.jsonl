@@ -1,3 +1,4 @@
+#Low-size data set. Can be retrained using AI-tools
 {"summary": "User cannot log in to Salesforce after password reset.", "steps": "Check credentials, reset password, verify MFA"}
 {"summary": "VPN fails to connect from home network.", "steps": "Check network settings, restart SSH client, verify firewall"}
 {"summary": "Printer is offline in the office.", "steps": "Check printer power, restart print spooler, verify network connection"}
@@ -83,3 +84,4 @@
 {"summary": "Cannot save Excel file to network drive.", "steps": "Check network, verify permissions, try saving locally"}
 {"summary": "Printer printing gibberish.", "steps": "Update driver, check language settings, clean printer heads"}
 {"summary": "User cannot download software from portal.", "steps": "Verify permissions, check internet, retry download"}
+
