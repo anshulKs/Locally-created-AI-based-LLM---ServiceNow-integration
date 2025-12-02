@@ -31,21 +31,22 @@
 from datasets import load_dataset
 from transformers import AutoTokenizer
 
-# 1️⃣ Load your local text file
+# Load your local text file
 dataset = load_dataset("text", data_files="C:/mini_llm/data.jsonl")
 print("Dataset loaded:")
 print(dataset)
 
-# 2️⃣ Load the tokenizer (small GPT model)
+# Load the tokenizer (small GPT model)
 tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
 
-# 3️⃣ Tokenize each line
+# Tokenize each line
 def tokenize_function(examples):
     return tokenizer(examples["text"], truncation=True, padding="max_length", max_length=128)
 
 tokenized_datasets = dataset.map(tokenize_function, batched=True)
 print("Dataset tokenized!")
 
-# 4️⃣ Print a sample
+# Print a sample
 print("Sample tokenized entry:")
 print(tokenized_datasets["train"][0])
+
